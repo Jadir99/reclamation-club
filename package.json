@@ -10,6 +10,7 @@
         "@vitejs/plugin-vue": "^4.0.0",
         "axios": "^1.6.1",
         "bootstrap": "^5.2.3",
+        "create-vite": "^5.0.0",
         "laravel-vite-plugin": "^0.8.0",
         "sass": "^1.56.1",
         "vite": "^4.0.0",
