@@ -1,10 +1,7 @@
 <?php
 
 use App\Http\Controllers\ReclamationContoller;
-use App\Models\reclamation;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Facade;
-
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -23,7 +20,8 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+// Route::resource('courses', ReclamationContoller::class);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/reclamation', [ReclamationContoller::class, 'index'])->name('reclamation');
+Route::get('Reclamation', [ReclamationContoller::class, 'index'])->name('reclamation');
 Route::resource('/createNewReclamation', ReclamationContoller::class);
 Route::post('/createNewReclamation', [ReclamationContoller::class, 'store'])->name('createNewReclamation');

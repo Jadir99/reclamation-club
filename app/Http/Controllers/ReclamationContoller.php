@@ -32,7 +32,7 @@ class ReclamationContoller extends Controller
                         'reclamation' => 'required',]);
                 $reclamation=new reclamation();
                 $reclamation->corpreclamation=$request->input('reclamation');
-                $reclamation->psudonom="jadir";  
+                $reclamation->psudonom=auth()->user()->name;  
                 $reclamation->datereclamation=$datereclamation;
                 $reclamation->save();
                 return redirect()->route('reclamation')->with('status','ur have been add reclamation !!');
